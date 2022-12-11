@@ -18,15 +18,6 @@ namespace ONVIFCelestialTracker
             {
                 Observer observer = camera.Location;
                 AstroTime time = new AstroTime(DateTime.UtcNow);
-                
-                AstroTime marsrise = Astronomy.SearchRiseSet(Body.Mars, observer, Direction.Rise, time, 1.0);
-                AstroTime marsset = Astronomy.SearchRiseSet(Body.Mars, observer, Direction.Set, time, 1.0);
-                AstroTime venusrise = Astronomy.SearchRiseSet(Body.Venus, observer, Direction.Rise, time, 1.0);
-                AstroTime venusset = Astronomy.SearchRiseSet(Body.Venus, observer, Direction.Set, time, 1.0);
-                AstroTime saturnrise = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Rise, time, 1.0);
-                AstroTime saturnset = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Set, time, 1.0);
-                AstroTime jupiterrise = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Rise, time, 1.0);
-                AstroTime jupiterset = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Set, time, 1.0);
 
                 switch(camera.Celestial)
                 {
@@ -44,6 +35,38 @@ namespace ONVIFCelestialTracker
                         if (IsVisible(moonrise, moonset))
                         {
                             CameraMover.Move(camera, Body.Moon, frmLog);
+                        }
+                        break;
+                    case "Mars":
+                        AstroTime marsrise = Astronomy.SearchRiseSet(Body.Mars, observer, Direction.Rise, time, 1.0);
+                        AstroTime marsset = Astronomy.SearchRiseSet(Body.Mars, observer, Direction.Set, time, 1.0);
+                        if (IsVisible(marsrise, marsset))
+                        {
+                            CameraMover.Move(camera, Body.Mars, frmLog);
+                        }
+                        break;
+                    case "Venus":
+                        AstroTime venusrise = Astronomy.SearchRiseSet(Body.Venus, observer, Direction.Rise, time, 1.0);
+                        AstroTime venusset = Astronomy.SearchRiseSet(Body.Venus, observer, Direction.Set, time, 1.0);
+                        if (IsVisible(venusrise, venusset))
+                        {
+                            CameraMover.Move(camera, Body.Venus, frmLog);
+                        }
+                        break;
+                    case "Saturn":
+                        AstroTime saturnrise = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Rise, time, 1.0);
+                        AstroTime saturnset = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Set, time, 1.0);
+                        if (IsVisible(saturnrise, saturnset))
+                        {
+                            CameraMover.Move(camera, Body.Saturn, frmLog);
+                        }
+                        break;
+                    case "Jupiter":
+                        AstroTime jupiterrise = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Rise, time, 1.0);
+                        AstroTime jupiterset = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Set, time, 1.0);
+                        if (IsVisible(jupiterrise, jupiterset))
+                        {
+                            CameraMover.Move(camera, Body.Jupiter, frmLog);
                         }
                         break;
                     default:
