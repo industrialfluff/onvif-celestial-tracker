@@ -8,9 +8,11 @@ Also requires 1+ ONVIF cameras on your network.  You must have the username and 
 
 Does not yet have the capability to zoom in.  Positions calculated by CosineKitty AstronomyEngine.
 
-Every 5 minutes, updates each camera with the position of the celestial body selected.  If 'None', then the camera is ignored.
+Every 5 minutes, updates each camera with the position of the celestial body selected.  If 'None', then the camera is ignored.  This is only while the application is loaded, does not move cameras in a background service.
 
-Will not update the camera if the object cannot be seen.
+Does not have the capability of viewing the stream, assumes you have another application to do that.
+
+Will not update the camera if the object cannot be seen.  
 
 ONVIF camera detection by OnvifDiscovery 1.2.2
 
