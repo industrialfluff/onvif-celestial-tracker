@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icons8-ptz-camera-48.ico</ApplicationIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <PackageIcon>icons8-ptz-camera-48.ico</PackageIcon>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ptz-icon32.png" />
+    <None Remove="satellitegps.py" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8-ptz-camera-48.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ptz-icon32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CosineKitty.AstronomyEngine" Version="2.1.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="OnvifDiscovery" Version="1.2.2" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icons8-ptz-camera-48.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
