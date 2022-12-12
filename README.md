@@ -2,7 +2,7 @@
 
 What does it do?  You have ONVIF PTZ cameras outside connected to a local network.  You'd like them to follow the sun, moon, Mars, Mercury, Venus, Jupiter, or Saturn.  Now you can do it.
 
-Windows Desktop 6.0 application, requires .NET 7.0 runtime to operate.
+Windows Desktop 6.0 application, requires .NET 7.0 runtime to operate.  Visual Studio 2022 requires the Visual Studio Installer extension.
 
 Also requires 1+ ONVIF cameras on your network.  You must have the username and password for these cameras.  GPS location, elevation, and compass direction of where the middle of the base of the camera is required.  Since these are celestial bodies, they don't have to be too accurate.
 
