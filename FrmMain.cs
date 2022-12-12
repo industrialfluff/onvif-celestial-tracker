@@ -51,6 +51,7 @@ namespace ONVIFCelestialTracker
                 Camera camera = new Camera();
                 camera.IP = device.Address;
                 camera.Addresses = device.XAdresses.ToList<string>();
+                camera.Celestial = "None"; 
                 cameras.Add(camera);
             }
             UpdateTreeView();
