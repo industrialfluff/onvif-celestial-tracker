@@ -69,6 +69,14 @@ namespace ONVIFCelestialTracker
                             CameraMover.Move(camera, Body.Jupiter, frmLog);
                         }
                         break;
+                    case "Mercury":
+                        AstroTime mercuryrise = Astronomy.SearchRiseSet(Body.Mercury, observer, Direction.Rise, time, 1.0);
+                        AstroTime mercuryset = Astronomy.SearchRiseSet(Body.Mercury, observer, Direction.Set, time, 1.0);
+                        if (IsVisible(mercuryrise, mercuryset))
+                        {
+                            CameraMover.Move(camera, Body.Mercury, frmLog);
+                        }
+                        break;
                     default:
                         break;
                 }
