@@ -62,8 +62,8 @@ namespace ONVIFCelestialTracker
                         }
                         break;
                     case "Jupiter":
-                        AstroTime jupiterrise = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Rise, time, 1.0);
-                        AstroTime jupiterset = Astronomy.SearchRiseSet(Body.Saturn, observer, Direction.Set, time, 1.0);
+                        AstroTime jupiterrise = Astronomy.SearchRiseSet(Body.Jupiter, observer, Direction.Rise, time, 1.0);
+                        AstroTime jupiterset = Astronomy.SearchRiseSet(Body.Jupiter, observer, Direction.Set, time, 1.0);
                         if (IsVisible(jupiterrise, jupiterset))
                         {
                             CameraMover.Move(camera, Body.Jupiter, frmLog);
